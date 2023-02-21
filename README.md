@@ -1,49 +1,28 @@
-# Rock-Paper-Scissors-Kata
-Kata for practicing OO style programming
+# Janken-Kata
+ジャンケンを題材に、Code Kataにトライしてみましょう
 
-The inspiration for this Kata comes from an example in the book
-[Object Design: Roles, Responsibilities, and Collaborations](https://www.amazon.co.uk/Object-Design-Responsibilities-Collaborations-Addison-Wesley/dp/0201379430) and the
-rules in the [Object Calisthenics](https://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf) paper by Jeff Bay.
-## Description
+## ジャンケンのルール
 
+>勝敗に関しては、次のようなルールが定められている。
+>グーは、チョキに勝ち、パーに敗れる。 
+> パーは、グーに勝ち、チョキに敗れる。 
+> チョキは、パーに勝ち、グーに敗れる。
+2人のときは、以上に加えて両者が同じ手を出したときには「あいこ（引き分け）」となる。
+> --<cite>[Wikipedia](https://ja.wikipedia.org/wiki/%E3%81%98%E3%82%83%E3%82%93%E3%81%91%E3%82%93)</cite>
 
->The game has only three possible outcomes other than a tie: a player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors") but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cut paper"). If both players throw the same shape, the game is tied and is usually immediately replayed to break the tie.
-> --<cite>[Wikipedia](https://en.wikipedia.org/wiki/Rock-paper-scissors)</cite>
-
-## Kata Rules
+## Kataの進め方
 
 ### Stage 1
-Write code to determine whether one shape object beats another.
-e.g. aPaper.beats(aRock)
+両者が出した組み合わせで勝敗が決まるようにTDDでコードを書いていきましょう
 
-Do this for all combinations
+ >例1) グー(Rock)はチョキ(Scissors)に勝つ  
+ > 例2）両者ともにパー(Paper)を出したら引き分ける
 
-> rock crushes scissors
+全ての組み合わせを実装しましょう
 
-> paper covers rock
-
-> scissors cut paper
 
 ### Stage 2
-Refactor your code to adhere to these rules:
-* One level of indentation per method
-* One dot per line
-* Don’t use if, else or case statements
+Stage1を早く終えたら、ルールを追加してやり直してみましょう
 
-### Stage 3
-Add Spock and Lizard to the equation:
-
-> Spock smashes scissors and vaporizes rock
-
-> Spock is poisoned by lizard and disproven by paper
-
-> Lizard poisons Spock and eats paper
-
-> Lizard is crushed by rock and decapitated by scissors
-
-### Stage 4
-Create a Game object that will simulate 2 players throwing shapes until
-one player wins the best of 7.
-
-Each round must be printed showing the shapes thrown by both players, the
-result of the round and a running total of the scores.
+>例1）if,elseを使わない  
+> 例2）マウスを使わない
