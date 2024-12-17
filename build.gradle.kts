@@ -14,6 +14,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-params:5.6.2")
 }
 
 tasks.test {
